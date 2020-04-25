@@ -1,0 +1,176 @@
+<!DOCTYPE html> 
+<HTML> 
+<HEAD><META charset="utf-8"><TITLE>Домашнее задание - дополнительное</TITLE>	
+</HEAD> 
+<BODY>
+<h1 align="center">Заполните анкету</h1>
+<table align="center" border="0" width="1200">
+    <TR>
+        <TD align="left">
+            <form id="personal_data" name="personal_data" method="get" 
+                action="http://fe.it-academy.by/TestForm.php">
+                <fieldset>
+                    <legend>Личные данные</legend>
+                    <input type="text" name="surname" placeholder="Фамилия"
+                        pattern="[А-Яа-яЁё]+" maxlength="25" required autofocus><br>
+                    <input type="text" name="firstname" placeholder="Имя"
+                        pattern="[А-Яа-яЁё]+" maxlength="20" required><br>
+                    <input type="text" name="patronymic" placeholder="Отчество"
+                        pattern="[А-Яа-яЁё]+" maxlength="24" required>        
+                    <form id="passport_data" name="passport_data" method="get" 
+                        action="http://fe.it-academy.by/TestForm.php">
+                        <fieldset>
+                            <legend>Паспортные данные</legend>
+                            <input type="text" name="series" placeholder="AA"
+                                pattern="[A-Z]{2}" maxlength="2" required>
+                            <input type="text" name="number" placeholder="1234567"
+                                pattern="\d{7}" maxlength="7" required>
+                        </fieldset>
+                    </form>    
+                    <form id="birthday_data" name="birthday_data" method="get" 
+                        action="http://fe.it-academy.by/TestForm.php">
+                        <fieldset>
+                            <legend>Дата рождения</legend>
+                            <input type="text" name="year" placeholder="2000"
+                                pattern="\d{4}" maxlength="4"><br>
+                            <select name="month" id="month">
+                                <option value="1" selected>Январь</option>
+                                <option value="2">Февраль</option>
+                                <option value="3">Март</option>
+                                <option value="4">Апрель</option>
+                                <option value="5">Май</option>
+                                <option value="6">Июнь</option>
+                                <option value="7">Июль</option>
+                                <option value="8">Август</option>
+                                <option value="9">Сентябрь</option>
+                                <option value="10">Октябрь</option>
+                                <option value="11">Ноябрь</option>
+                                <option value="12">Декабрь</option>
+                            </select><br>
+                            <input type="number" min="1" max="31" step="1" 
+                                id="day" name="day">
+                        </fieldset>
+                    </form>    
+                    <select name="country" id="country">
+                        <option value="value_by" selected>РБ</option>
+                    </select><br>
+                    <label for="address">Адрес:</label><br>
+                    <textarea name="address"></textarea>
+                </fieldset>
+            </form>
+        </TD>
+    </TR>
+    <TR>
+        <TD align="left">
+            <form id="interests_data" name="interests_data" method="get" 
+                action="http://fe.it-academy.by/TestForm.php">
+                <fieldset>
+                    <form id="hobby_data" name="hobby_data" method="get" 
+                        action="http://fe.it-academy.by/TestForm.php">
+                        <fieldset>
+                            <legend>Хобби</legend>
+                            <label>
+                                <input type="checkbox" name="hobby[]" value="value_1" 
+                                    id="hobby">Рыбалка
+                            </label><br>
+                            <label>
+                                <input type="checkbox" name="hobby[]" value="value_2" 
+                                    id="hobby">Астрономия
+                            </label><br>
+                            <label>
+                                <input type="checkbox" name="hobby[]" value="value_3" 
+                                    id="hobby">Дайвинг
+                            </label><br>
+                            <label>
+                                <input type="checkbox" name="hobby[]" value="value_4" 
+                                    id="hobby">Марки
+                            </label>
+                        </fieldset>
+                    </form>
+                    <form id="animals_data" name="animals_data" method="get" 
+                        action="http://fe.it-academy.by/TestForm.php">
+                        <fieldset>
+                            <legend>Домашние животные</legend>
+                            <select name="animals[]" size="12" multiple id="animals">
+                                <optgroup label="Попугаи">
+                                  <option value="1" selected>Волнистый</option>
+                                  <option value="2">Ара</option>
+                                  <option value="3">Неразлучник</option>
+                                </optgroup>
+                                <optgroup label="Рыба">
+                                  <option value="4">Караси</option>
+                                  <option value="5">Окуни</option>
+                                  <option value="6">Осётр</option>
+                                </optgroup>
+                                <optgroup label="Птицы">
+                                    <option value="7">Стая ворон</option>
+                                    <option value="8">Аист</option>
+                                    <option value="9">Археоптерикс</option>
+                                </optgroup>
+                            </select>
+                        </fieldset>
+                    </form>
+                </fieldset>
+            </form>
+        </TD>
+    </TR>
+    <TR>
+        <TD>
+            <form id="login_data" name="login_data" method="get" 
+                action="http://fe.it-academy.by/TestForm.php">
+                <fieldset>
+                    <legend>Данные для входа и восстановления пароля</legend>
+                    <input type="text" id="login" name="login" placeholder="Логин"
+                        pattern="[A-Za-z]{5,20}" maxlength="20" required><br>
+                    <input type="password" id="passwd" name="password" placeholder="Пароль"
+                        pattern="[A-Za-z]{10,20}" maxlength="20" required autocomplete="off">     
+                </fieldset>
+            </form>
+        </TD>
+    </TR>
+    <TR>
+        <TD>
+            <form id="coordinates_data" name="coordinates_data" method="get" 
+                action="http://fe.it-academy.by/TestForm.php">
+                <fieldset>
+                    <legend>Координаты</legend>
+                    <input type="email" name="email" placeholder="введите адрес почты"><br>
+                    <input type="url" name="url" placeholder="введите адрес сайта">     
+                </fieldset>
+            </form>
+        </TD>
+    </TR>
+    <TR>
+        <TD>
+            <form id="digits_data" name="digits_data" method="get" 
+                action="http://fe.it-academy.by/TestForm.php">
+                <fieldset>
+                    <legend>Цифры</legend>
+                    <input type="number" name="number" min="-2.5" max="2.5" step="0.1"><br>
+                    <input type="range" name="range" min="1" max="10">     
+                </fieldset>
+            </form>
+        </TD>
+    </TR>
+    <TR>
+        <TD>
+            <form id="control_data" name="control_data" method="get" 
+                action="http://fe.it-academy.by/TestForm.php">
+                <fieldset>
+                    <legend>Кнопки управления</legend>
+                    <!--<input type="submit" value="Отправить">
+                    <input type="reset" value="Сбросить"><br>
+                    <input type="image" src="email.jpg">-->
+                    <!--form="passport_data" 
+                    form="birthday_data" form="interests_data" form="hobby_data" form="animals_data"
+                    form="login_data" form="coordinates_data" form="digits_data" form="control_data"-->
+                    <button type="submit" form="personal_data">Отправить</button>
+                    <button type="reset" form="personal_data">Сбросить</button><br>
+                    <button type="button" form="personal_data"><img src="email.jpg"></button>
+                </fieldset>
+            </form>
+        </TD>
+    </TR>
+</table> 
+</BODY> 
+</HTML> 
