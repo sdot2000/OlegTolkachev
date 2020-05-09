@@ -1,0 +1,70 @@
+div.MenuLevel1 { 
+    display: inline-flex;
+}
+div.MenuLevel1 > div { 
+    background-color: lightgray; 
+    border: solid black 1px; 
+    position: relative; 
+    cursor: pointer;
+    border-radius: 2px;
+    color: gray;
+}
+div.MenuLevel2 { 
+    width: 165px; 
+}
+div.MenuLevel2 > div { 
+    background-color: lightgray; 
+    border: solid black 1px; 
+    cursor: pointer;
+    border-radius: 2px;
+    color: gray;    
+}
+div.MenuLevel1 > div:hover div.MenuLevel2 { 
+    position: absolute;  
+}
+#day3 {
+    background-color: gray; 
+    border: solid black 1px; 
+    cursor: pointer;
+    border-radius: 2px;
+    color: whitesmoke;   
+}
+@media all and (max-width: 540px) {
+    div.MenuLevel1 { 
+        width: 165px;
+        display: block;
+    }
+    div.MenuLevel1 > div { 
+        background-color: lightgray; 
+        border: solid black 1px; 
+        position: relative; 
+        cursor: pointer;
+        border-radius: 2px;
+        color: gray;
+    }
+    div.MenuLevel2 { 
+        width: 165px; 
+        display: none;
+    }
+    div.MenuLevel2 > div { 
+        background-color: lightgray; 
+        border: solid black 1px; 
+        cursor: pointer;
+        border-radius: 2px;
+        color: gray;    
+    }
+    div.MenuLevel1 > div:hover div.MenuLevel2 { 
+        display: block; 
+        position: absolute; 
+        left: 80%; 
+        top: 90%; 
+        z-index: 1;
+    }
+    #day3 {
+        background-color: lightgray; 
+        border: solid black 1px; 
+        cursor: pointer;
+        border-radius: 2px;
+        color: gray;   
+    }
+}

@@ -1,0 +1,71 @@
+<!DOCTYPE html> 
+<HTML lang="en"> 
+<HEAD>
+    <META charset="utf-8">
+    <TITLE>Домашнее задание - базовое #3</TITLE>
+    <style>
+        .leftblock {
+            float: left;
+            width: 15em;
+            background-color: lightgray;  
+            padding: 0.5em 0em;
+        }
+        .rightblock {
+            float: right; 
+            width: 81%;
+            background-color: gray; 
+            margin-bottom: .2em;
+            padding-top: 0.5em;
+        }
+        .outerblock {
+            background-color: whitesmoke;
+        }
+        .footer {
+            background-color: lightgray;
+        }
+    </style>	
+</HEAD> 
+<BODY>
+<div class="outerblock">
+    <div class="leftblock">
+        <h3>Блок навигации</h3>
+        <ul>
+            <li>Ширина 15em</li>
+            <li>Должен присутствовать цвет фона</li>
+            <li>Располагается слева</li>
+            <li>Блок навигации наполните контентом достаточным, 
+                чтобы по высоте он начинал захватывать вторую статью,
+                как показано в данном примере
+            </li>
+        </ul>
+    </div>
+    <div class="rightblock">
+        <h3>Статья 1</h3>
+        <p>Размер блока:<br>
+            Занимает всю доступную ширину<br>
+            Должен присутствовать цвет фона<br>
+            Во всех "статьях" сделайте отступ снизу от соседей равным .2em, 
+            при помощи свойства margin-bottom
+        </p>
+    </div>
+    <div class="rightblock">
+        <h3>Статья 2</h3>
+        <p>Размер блока:<br>
+            Занимает всю доступную ширину<br>
+            Должен присутствовать цвет фона<br>
+            Во всех "статьях" сделайте отступ снизу от соседей равным .2em, 
+            при помощи свойства margin-bottom
+            Картинка вставленна при помощи тега, 
+            плавание организованно по правому краю внутри данной статьи для этой картинки.
+        </p>
+        <div align="right">
+            <img src="icon_mail.png">
+        </div>
+    </div>
+    <div style="clear: both"></div>
+</div>
+<div class="footer">Нижний блок, подвал. Занимает всю доступную ширину. 
+    Высота определяется помещённым внутрь контентом.
+</div>
+</BODY> 
+</HTML> 
