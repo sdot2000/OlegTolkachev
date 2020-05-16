@@ -12,7 +12,12 @@ div.MenuLevel1 > div {
 }
 div.MenuLevel2 { 
     width: 165px; 
-    display: none;
+    /*display: none;*/
+    opacity: 0; /* По умолчанию скрываем подменю */
+    visibility: hidden;
+    transition-property: opacity, visibility; /* Важно чтобы transition применялось к обоим свойствам */
+    transition-duration: 1.5s; /* Добавляем анимацию 1.5 сек. */
+    transition-delay: 0.15s; /* Добавляем задержку в 0.15 сек. */
 }
 div.MenuLevel2 > div { 
     background-color: lightgray; 
@@ -22,11 +27,13 @@ div.MenuLevel2 > div {
     color: gray;    
 }
 div.MenuLevel1 > div:hover div.MenuLevel2 { 
-    display: block; 
+    /*display: block;*/ 
     position: absolute; 
     left: 0%; 
     top: 100%; 
     z-index: 1;  
+    opacity: 1; /* Показываем подменю при ховере */
+    visibility: visible;
 }
 div.MenuLevel1 > div:hover {
     background-color: gray; 
