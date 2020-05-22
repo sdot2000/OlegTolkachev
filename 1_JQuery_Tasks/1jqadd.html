@@ -1,0 +1,141 @@
+<!DOCTYPE html> 
+<HTML> 
+<HEAD>
+    <META charset="utf-8">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css" integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" crossorigin="anonymous">
+    <TITLE>Домашнее задание - дополнительное</TITLE>
+    <style type="text/css">
+        table {
+            border-collapse: collapse;
+        }
+        table tr:first-child {
+            background-color: gray;
+            color: whitesmoke;
+        }
+        table tr:not(:nth-child(1)):nth-child(odd) {
+            background-color: lightgray;
+        }
+        th, td {
+            border: thin black dotted;
+        }
+        table tr:not(:first-child) th {
+            text-align: left;
+            border-left: none;
+        }
+        table tr:not(:first-child) td:last-child {
+            border-right: none;
+        }
+        table caption {
+            position: absolute;
+            left: 220px;
+            top: 150px;
+            font-size: small;
+        }
+        table tr:not(:first-child):hover {
+            background-color: violet;
+            color: green;
+            cursor: pointer;
+        }
+        input {
+            position: absolute;
+            left: 220px;
+            top: 180px;
+        }
+    </style>
+</HEAD> 
+<BODY>
+<form id="form" name="form" method="post/get" 
+    action="http://fe.it-academy.by/TestForm.php">
+    <table>
+        <caption>ДАННЫЕ О СОТРУДНИКАХ</caption>
+        <tr>
+            <th>ФИО</th>
+            <th>пол</th> 
+            <th>должность</th>
+            <th>дата рож.</th>
+            <th>Данные 01</th>
+            <th>Данные 02</th>
+        </tr>
+        <tr class="String1">
+            <th>Иванов Иван Иванович</th>
+            <td>М</td> 
+            <td>начальник</td>
+            <td>01.01.1960</td>
+            <td>4567</td>
+            <td>3453</td>
+        </tr>
+        <tr class="String2">
+            <th>Петрова Илонна Петровна</th>
+            <td>Ж</td> 
+            <td>секретарь</td>
+            <td>01.01.1989</td>
+            <td>98795</td>
+            <td>46523</td>
+        </tr>
+        <tr class="String3">
+            <th>Сидоров Илья Игоревич</th>
+            <td>М</td> 
+            <td>бухгалтер</td>
+            <td>01.01.1979</td>
+            <td>743434</td>
+            <td>987979</td>
+        </tr>
+        <tr class="String4">
+            <th>Пупин Фёдор Фёдорович</th>
+            <td>М</td> 
+            <td>водитель</td>
+            <td>01.01.1963</td>
+            <td>74323434</td>
+            <td>9232379</td>
+        </tr>
+        <tr class="String5">
+            <th>Крупин Сергей Иванович</th>
+            <td>М</td> 
+            <td>водитель 2</td>
+            <td>01.01.1983</td>
+            <td>3234534</td>
+            <td>923123379</td>
+        </tr>
+    </table>
+    <fieldset>
+        <input type="submit" value="Нет скрытых строк">
+    </fieldset> 
+</form>
+<script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js" integrity="sha384-OgVRvuATP1z7JjHLkuOU7Xw704+h835Lr+6QL9UvYjZE3Ipu6Tp75j7Bh/kR0JKI" crossorigin="anonymous"></script>
+<script>
+    $(document).ready(function() {
+        $(".String1").click(function() {
+            $(".String1").hide();
+            $('input[type=submit]').attr('value', 'Показать все строки');
+        });
+        $(".String2").click(function() {
+            $(".String2").hide();
+            $('input[type=submit]').attr('value', 'Показать все строки');
+        });
+        $(".String3").click(function() {
+            $(".String3").hide();
+            $('input[type=submit]').attr('value', 'Показать все строки');
+        });
+        $(".String4").click(function() {
+            $(".String4").hide();
+            $('input[type=submit]').attr('value', 'Показать все строки');
+        });
+        $(".String5").click(function() {
+            $(".String5").hide();
+            $('input[type=submit]').attr('value', 'Показать все строки');
+        });
+        $('input[type=submit]').click(function(e) {
+            e.preventDefault();
+            $(".String1").show();
+            $(".String2").show();
+            $(".String3").show();
+            $(".String4").show();
+            $(".String5").show();
+            $('input[type=submit]').attr('value', 'Нет скрытых строк');
+        });
+    });
+</script>
+</BODY> 
+</HTML> 
